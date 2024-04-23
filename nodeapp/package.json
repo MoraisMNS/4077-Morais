@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@types/supertest": "^6.0.2",
+    "express": "^4.19.2",
+    "mocha": "^10.4.0",
+    "supertest": "^6.3.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha ./test/test.js"
+  }
+}
