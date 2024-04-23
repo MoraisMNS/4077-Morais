@@ -12,13 +12,15 @@ pipeline {
             }
         }
 
-        stage('Build DockerImage') {
-            steps {
-                script {
-                    bat 'docker build -t morais-4077 .'
-                }
-            }
+     stage('Build DockerImage') {
+    steps {
+        script {
+            env.DOCKER_BUILDKIT = '1'
+            bat 'docker build -t morais-4077 .'
         }
+    }
+}
+
 
         stage('Run Docker Image') {
             steps {
